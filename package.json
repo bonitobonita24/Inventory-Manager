@@ -1,0 +1,30 @@
+{
+	"name": "inventory-manager",
+	"version": "0.0.1",
+	"private": true,
+	"packageManager": "pnpm@9.12.0",
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"lint": "turbo run lint",
+		"typecheck": "turbo run typecheck",
+		"test": "turbo run test",
+		"db:generate": "pnpm --filter @acme/db generate",
+		"db:migrate": "pnpm --filter @acme/db migrate",
+		"db:seed": "pnpm --filter @acme/db seed",
+		"db:studio": "pnpm --filter @acme/db studio",
+		"db:reset": "pnpm --filter @acme/db reset",
+		"tools:validate-inputs": "node tools/validate-inputs.mjs",
+		"tools:check-env": "node tools/check-env.mjs",
+		"tools:check-product-sync": "node tools/check-product-sync.mjs",
+		"tools:hydration-lint": "node tools/hydration-lint.mjs"
+	},
+	"devDependencies": {
+		"turbo": "^2.0.0",
+		"typescript": "^5.4.0"
+	},
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=9"
+	}
+}
